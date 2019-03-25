@@ -6,6 +6,8 @@ It can also be used for general research purposes to answer questions such as:
 2. What features are most associated with higher-end models?
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
 
+<img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
+
 Project Components
 ------------------
 The project is broken into 2 broad components:
