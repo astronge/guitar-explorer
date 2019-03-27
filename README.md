@@ -7,6 +7,7 @@ Welcome! This tool's purpose is to allow exploration of guitar models to help yo
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
 
 <img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
+[TRY IT](https://astronge.github.io)
 
 ## Instructions
 ### Interacting
@@ -29,17 +30,30 @@ Once you are satisfied with your selections, clicking the RESULTS button will op
 Once you have identified the right instrument, clicking on its image will take you Musicians Friend website where you may complete your purchase. Go ahead, you deserve it!
 
 ## Project Design
-### High-level Round Trip
+### Components and Flow
 
 The project is broken into 3 broad components:
 
 1. Data ETL Pipeline: (a) Data Scraper; (b) Data Cleanser; (c) Data Pusher
 2. Database
 3. Data Visualization
-
-The ETL Pipeline is written in Python, utilizing Beautiful Soup and Selenium to assist with data scraping
-
 <img alt="Program Flow" src="flow.png" width="50%">
+
+#### ETL Pipeline
+All ETL Pipeline components are written in Python.
+
+The data scraper makes use of the BeautifulSoup and Selenium libraries and follows [ethical scraping principles](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01).  
+
+The data cleanser utilizes the Pandas library, and Jupyter Notebook was used for data exploration and developing the data cleansing steps.
+
+The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to Firestore database.
+
+#### Database
+The Google Cloud Firestore NoSQL database is used as the backend for this project.
+
+#### Data Visualization
+The data visualization is a web-based application (HTML/CSS/Javascript) that both retrieves the data from the database and then renders it.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
+
 
 ### Description of Files
 Data ETL Pipeline
