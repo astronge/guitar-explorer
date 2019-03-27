@@ -31,12 +31,15 @@ Once you have identified the right instrument, clicking on its image will take y
 ## Project Design
 ### High-level Round Trip
 
-The project is broken into 2 broad components:
+The project is broken into 3 broad components:
 
 1. Data ETL Pipeline: (a) Data Scraper; (b) Data Cleanser; (c) Data Pusher
-2. Data Visualization
+2. Database
+3. Data Visualization
 
 The ETL Pipeline is written in Python, utilizing Beautiful Soup and Selenium to assist with data scraping
+
+<img alt="Program Flow" src="flow.png" width="50%">
 
 ### Description of Files
 Data ETL Pipeline
