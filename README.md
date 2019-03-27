@@ -8,7 +8,7 @@ It can also be used for general research purposes to answer questions such as:
 
 <img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
 
-[Try the demo](https://astronge.github.com)
+<a href="https://astronge.github.com/" target="_blank">Try the demo</a>
 
 Project Components
 ------------------
