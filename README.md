@@ -8,6 +8,8 @@ It can also be used for general research purposes to answer questions such as:
 
 <img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
 
+[Try the demo](https://astronge.github.com)
+
 Project Components
 ------------------
 The project is broken into 2 broad components:
