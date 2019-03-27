@@ -7,7 +7,7 @@ Welcome! This tool's purpose is to allow exploration of guitar models to help yo
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
 
 <img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
-[TRY IT](https://astronge.github.io)
+[TRY IT](https://astronge.github.io) *Best viewed using a screen of resolution 1920x1080 or above.*
 
 ## Instructions
 ### Interacting
