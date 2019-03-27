@@ -39,7 +39,7 @@ The project is broken into 3 broad components:
 3. Data Visualization
 <img alt="Program Flow" src="flow.png" width="50%">
 
-#### ETL Pipeline
+### ETL Pipeline
 All ETL Pipeline components are written in Python.
 
 The data scraper makes use of the BeautifulSoup and Selenium libraries and follows [ethical scraping principles](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01).  
@@ -48,10 +48,10 @@ The data cleanser utilizes the Pandas library, and Jupyter Notebook was used for
 
 The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
 
-#### Database
+### Database
 The Google Cloud Firestore NoSQL database is used as the backend for this project.
 
-#### Data Visualization
+### Data Visualization
 The data visualization is a web-based application (HTML/CSS/Javascript) that both fetches the data from the database and then renders it once the data have been fully retrieved.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
 
 Description of Data 
