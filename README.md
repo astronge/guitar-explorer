@@ -54,26 +54,6 @@ The Google Cloud Firestore NoSQL database is used as the backend for this projec
 #### Data Visualization
 The data visualization is a web-based application (HTML/CSS/Javascript) that both fetches the data from the database and then renders it once the data have been fully retrieved.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
 
-
-### Description of Files
-Data ETL Pipeline (guitar_scraper)
-
-File                              |  Description
-----------------------------------|------------------------------------------------------------------------------------
-Brand                             |  Manufacturer of the instrument.
-Price                             |  Price of the instrument in US Dollars.
-Country of Origin                 |  Where the instrument was manufactured.
-
-Data Vizualization (guitar_explorer)
-
-File                              |  Description
-----------------------------------|------------------------------------------------------------------------------------
-Brand                             |  Manufacturer of the instrument.
-Price                             |  Price of the instrument in US Dollars.
-Country of Origin                 |  Where the instrument was manufactured.
-
-
-
 Description of Data 
 -------------------
 Category                          |  Description
