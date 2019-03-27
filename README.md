@@ -46,17 +46,17 @@ The data scraper makes use of the BeautifulSoup and Selenium libraries and follo
 
 The data cleanser utilizes the Pandas library, and Jupyter Notebook was used for data exploration and developing the data cleansing steps.
 
-The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to Firestore database.
+The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
 
 #### Database
 The Google Cloud Firestore NoSQL database is used as the backend for this project.
 
 #### Data Visualization
-The data visualization is a web-based application (HTML/CSS/Javascript) that both retrieves the data from the database and then renders it.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
+The data visualization is a web-based application (HTML/CSS/Javascript) that both fetches the data from the database and then renders it once the data have been fully retrieved.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
 
 
 ### Description of Files
-Data ETL Pipeline
+Data ETL Pipeline (guitar_scraper)
 
 File                              |  Description
 ----------------------------------|------------------------------------------------------------------------------------
@@ -64,7 +64,7 @@ Brand                             |  Manufacturer of the instrument.
 Price                             |  Price of the instrument in US Dollars.
 Country of Origin                 |  Where the instrument was manufactured.
 
-Data Vizualization
+Data Vizualization (guitar_explorer)
 
 File                              |  Description
 ----------------------------------|------------------------------------------------------------------------------------
@@ -74,7 +74,7 @@ Country of Origin                 |  Where the instrument was manufactured.
 
 
 
-Description of Data
+Description of Data 
 -------------------
 Category                          |  Description
 ----------------------------------|------------------------------------------------------------------------------------
