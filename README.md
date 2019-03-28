@@ -81,3 +81,6 @@ Install guitar_scraper dependencies by opening a terminal window from the guitar
 
 ### Getting Fresh Data
 To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time (mostly due to sleeping a bit between each request).  
+
+## License
+MIT
