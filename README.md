@@ -25,7 +25,7 @@ SELECT guitars
 The number in the header bar refers to how many guitars meet your filtering criteria.
 
 ### Viewing Results
-Once you are satisfied with your selections, clicking the RESULTS button will open the results panel for you to be able to scroll through the list of guitars that was returned. 
+Once you are satisfied with your selections, clicking the RESULTS button will open the results panel for you to be able to scroll through the list of guitars that were returned. 
 
 ### Call to Action
 Once you have identified the right instrument, clicking on its image will take you to the Musicians Friend website where you may complete your purchase.  Go ahead, you deserve it!
@@ -34,7 +34,6 @@ Once you have identified the right instrument, clicking on its image will take y
 ### Components and Flow
 
 This project is broken into 3 components:
-
 1. Data ETL Pipeline: (a) Data Scraper; (b) Data Cleanser; (c) Data Pusher
 2. Database
 3. Data Visualization
@@ -50,10 +49,10 @@ The data cleanser utilizes the Pandas and NumPy libraries.  Jupyter Notebook was
 The data pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
 
 ### Database
-The Google Cloud Firestore NoSQL database is used as the backend for this project.
+Google Cloud Firestore, a NoSQL database, is used as the backend for this project.
 
 ### Data Visualization
-The data visualization is a web-based application (HTML/CSS/Javascript) that both fetches the data from the database and then renders it once the data have been fully retrieved.  Used libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
+The data visualization is a web-based application (HTML/CSS/Javascript) that both fetches the data from the database and then renders it once the data have been fully retrieved.  Libraries: d3.js, dc.js, crossfilter.js, Bootstrap 4, Bootstrap Material Design.
 
 Description of Data 
 -------------------
@@ -73,9 +72,9 @@ Pickups - Active or Passive       |  Whether the signals received from the picku
 
 ## Getting This to Work Locally
 ### Setting Up Firebase
-In order to run this locally, you would need to create a new Firebase repository called "guitars".  You then would have to make two further changes:
+In order to run this locally, you would need to create a new Firebase collection called "guitars".  You then would have to make two changes to the project:
 1.  Update the guitars-firebase.json file located in the guitar_scraper folder.  Adding your [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) credentials will allow the data pusher to access the Firestore database.
 2.  Update index.html in the guitar_explorer folder to include your [personal configs](https://firebase.google.com/docs/web/setup?authuser=0) to initialize Firebase.  This will allow data to be pulled from Firebase.
 
 ### Getting Fresh Data
-To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time, mostly due to sleeping a bit between each request.  
+To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time (mostly due to sleeping a bit between each request).  
