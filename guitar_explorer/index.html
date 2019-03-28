@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/dc.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-scrollbar.min.css">
+</head>
+<div id="background">
+<div id="loader"></div>  
+<div id="content" class="animate-bottom">
+<nav class="navbar navbar-light bg-light">
+    <a class="page-header"><span>Guitar Data Explorer</a>
+    <div id="count" class="row" style="width: 500px !important">
+        <div class="dc-data-count col">
+            <div class="count">
+                <h2><span class='filter-count'></span></h2>
+            </div>
+        </div>
+        <div class="buttons col">
+                <button type="button" class="btn btn-raised btn-primary" id="sidebarCollapse">Results</button>
+                <button type="button" class="btn btn-raised btn-info" onclick=reset()>Reset</button>
+                <form>  
+                    <input type="button" value="About" onclick="window.location.href='https://github.com/astronge/guitar-explorer/'"
+                    class="btn btn-raised btn-secondary"/>
+                </form>  
+        </div>
+    </div>
+</nav>
+<div class="wrapper">
+    <nav id="sidebar" class="inactive">
+        <div class="sidebar-header">
+            <h3>Results</h3>
+            <table class="dc-chart table" id="guitar-table">
+
+                <thead>
+                    <tr>
+                        <th class="dc-table-head">Brand</th>
+                        <th class="dc-table-head">Model</th>
+                        <th class="dc-table-head">Price</th>
+                        <th class="dc-table-head"></th>
+                    </tr>
+                 </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">            
+        <div class="card text-center">
+            <div class="chart-header">Brand</div>
+            <div class="container-fluid">
+                <div>
+                    <div class="dc-chart" id="brand-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="chart-header">Price</div>
+            <div class="container-fluid">
+                <div class="dc-chart" id="price-chart"></div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="chart-header">Country of Origin</div>
+            <div class="container-fluid">
+                <div class="dc-chart" id="country-chart"></div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <div id="body" class="card text-center" style="width: 214px !important;">
+            <div class="chart-header">Body</div>
+            <div class="container-fluid">
+                <div>
+                    <div>
+                        <p class="card-text">Shape</p>
+                        <div class="dc-chart" id="body_shape-chart"></div>
+                    </div>
+                    <div>
+                        <p class="card-text">Type</p>
+                        <div class="dc-chart" id="body_type-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="neck" class="card text-center" style="width: 214px !important;">
+            <div class="chart-header">Neck</div>
+            <div class="container-fluid">
+                <div>
+                    <p class="card-text">Joint</p>
+                    <div class="dc-chart" id="neck_joint-chart"></div>
+                </div>
+                <div>
+                    <p class="card-text">Finish</p>
+                    <div class="dc-chart" id="neck_finish-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div id="fretboard" class="card text-center" style="width: 214px !important;">
+            <div class="chart-header">Fretboard</div>
+            <div class="container-fluid">
+                <div>
+                    <p class="card-text">Material</p>
+                    <div class="dc-chart" id="fretboard_material-chart"></div>
+                </div>
+                <div>
+                    <p class="card-text">Number of Frets</p>
+                    <div class="dc-chart" id="number_of_frets-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div id="pickups" class="card text-center" style="width: 214px !important;">
+            <div class="chart-header">Pickups</div>
+            <div class="container-fluid">
+                <div>
+                    <p class="card-text">Configuration</p>
+                    <div class="dc-chart" id="pickup_configuration-chart"></div>
+                </div>
+                <div>
+                    <p class="card-text">Active or Passive</p>
+                    <div class="dc-chart" id="active_or_passive-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div id="hardware" class="card text-center" style="width: 214px !important;">
+            <div class="chart-header">Hardware</div>
+            <div class="container-fluid">
+                <div>
+                    <p class="card-text">Bridge Type</p>
+                    <div class="dc-chart" id="bridge_type-chart"></div>
+                </div>
+                <div>
+                    <p class="card-text">Tuners</p>
+                    <div class="dc-chart" id="tuners-chart"></div>
+                </div>
+            </div>
+        </div>            
+    </div> 
+</div>
+</div>
+<div >
+<a href="https://www.flickr.com/photos/designex/albums/72157649240888662" class="img-attrib">IMG_2835-1-4 by designex licensed under CC BY-NC 2.0</a>
+</div>
+<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-material-design.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/custom-scrollbar.min.js"></script>
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyANQKg3rYu4BvZliIRRb5R_6iv0VJrYKHs",
+        authDomain: "guitars-a9616.firebaseapp.com",
+        databaseURL: "https://guitars-a9616.firebaseio.com",
+        projectId: "guitars-a9616",
+        storageBucket: "guitars-a9616.appspot.com",
+        messagingSenderId: "827835700748"
+    };
+    firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="js/guitars.js"></script>
+</body>
+</html>

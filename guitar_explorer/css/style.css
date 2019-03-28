@@ -1,0 +1,225 @@
+/* Background image and attribution */
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
+    width: 100%;
+}
+
+#background {
+    background-image: url("/img/background.jpg");
+    background-size: contain;
+    background-size: cover;
+    margin: 71 0 0 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.img-attrib {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 .5em .5em 0;
+    padding: .25em;
+    color: black;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: .75em;
+
+  }
+
+/* Loading */
+#content {
+    display: none;
+}
+
+/* Loading spinner */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #009688;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animate load content from bottom */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+/* Results side bar */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 500px;
+    position: fixed;
+    padding-top: 15px;
+    padding-left: 12px;
+    padding-bottom: 120px;
+    margin-top: 10px;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #009688;
+    color: white;
+    transition: all 0.3s;
+}
+
+#sidebar.inactive {
+    margin-left: -500px;
+    transition: all 0.3s;
+}
+
+.dc-table-head  {
+    font-size: .8em;
+}
+
+.dc-table-column {
+    font-size: .8em;
+}
+
+.container {
+    float: center;
+}
+
+.container.sidebar {
+    margin-left: 550px;
+    transition: all 0.3s;
+    float: center;
+}
+
+/* Body contents */
+h2 {
+    font-size: 3.3em;
+    text-align: right;
+    margin: 0px;
+}
+
+div.dc-chart {
+    padding-left: 1px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.card-body {
+    padding-bottom: 5px !important;
+}
+
+.card-text {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.card {
+    background-color: #E0E0E0;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.chart-header {
+    background-color: #4D4D4D;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: white;
+    font-size: 1.2em;
+}
+
+.dc-chart .axis path, .dc-chart .axis line {
+    stroke: black;
+}
+
+.dc-chart g.row text, .dc-chart text.pie-slice, .dc-chart .axis text {
+    fill: black;
+}
+
+/* Header */
+button {
+    align-items: right;
+}
+
+.btn {
+    margin-left: 5px;
+}
+
+.buttons {
+    float: right;
+    vertical-align: middle;
+    display: flex;
+}
+
+#count {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.page-header {
+    font-size: 2.5em;
+    color: white !important;
+}
+
+.navbar {
+    background-color: #4D4D4D !important;
+    margin-bottom: 20px;
+}
+
+.dc-data-count {
+    margin: 0px;
+}
+
+.filter-count {
+    color: white !important;
+}
+
+
