@@ -70,3 +70,12 @@ Fretboard - Material              |  The type of wood or other material used for
 Fretboard - Number of Frets       |  How many frets are set in the fretboard.
 Pickups - Configuration           |  The types of pickups used and in what positions. Placement is bridge -> neck; H = humbucker, S = single coil. Example: HSS means bridge humbucker, middle single coil, and neck single coil.
 Pickups - Active or Passive       |  Whether the signals received from the pickups are boosted by an internal preamp. 
+
+## Getting This to Work Locally
+### Setting Up Firebase
+In order to run this locally, you would need to create a new Firebase repository called "guitars".  You then would have to make two further changes:
+1.  Update the guitars-firebase.json file located in the guitar_scraper folder.  Adding your [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) credentials will allow the data pusher to access the Firestore database.
+2.  Update index.html in the guitar_explorer folder to include your [personal configs](https://firebase.google.com/docs/web/setup?authuser=0) to initialize Firebase.  This will allow data to be pulled from Firebase.
+
+### Getting Fresh Data
+To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time, mostly due to sleeping a bit between each request.  
