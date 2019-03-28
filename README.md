@@ -7,14 +7,15 @@ Welcome!  This tool's purpose is to allow exploration of guitar models to help y
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
 
 <img alt="Guitar Data Explorer" src="screenshot.png" width="75%">
+
 [TRY IT](https://astronge.github.io) *Best viewed using a screen of resolution 1920x1080 or above.*
 
 ## Instructions
 ### Interacting
-The dashboard contains a number of charts that display information related to features that may be found on a guitar, such as the body shape or fretboard material.  Interact with the charts by clicking on them to filter for the features that you are interested in. Selecting a feature from a particular category will filter out all models that do not have the particular feature set you have selected for.  
+The dashboard contains a number of charts that display guitar-related information, such as body shape or fretboard material.  Interact with the charts by clicking on them to filter for the features that you are interested in.  Selecting a feature from a particular chart will filter out all models that do not have that particular feature.  
 
 ### Filtering
-Within a feature, selections are OR and between features selections are AND.  For example, selecting "Double Cutaway" from Body Shape and both "Maple" and "Rosewood" for fretboard material, the resulting filter would be equivalent to the following SQL query:
+Within a chart, selections are OR and between features selections are AND.  For example, selecting "Double Cutaway" from Body Shape and both "Maple" and "Rosewood" for fretboard material, the resulting filter would be equivalent to the following SQL query:
 ```
 SELECT guitars 
   FROM guitar
@@ -27,12 +28,12 @@ The number in the header bar refers to how many guitars meet your filtering crit
 Once you are satisfied with your selections, clicking the RESULTS button will open the results panel for you to be able to scroll through the list of guitars that was returned. 
 
 ### Call to Action
-Once you have identified the right instrument, clicking on its image will take you Musicians Friend website where you may complete your purchase.  Go ahead, you deserve it!
+Once you have identified the right instrument, clicking on its image will take you to the Musicians Friend website where you may complete your purchase.  Go ahead, you deserve it!
 
 ## Project Design
 ### Components and Flow
 
-The project is broken into 3 broad components:
+This project is broken into 3 components:
 
 1. Data ETL Pipeline: (a) Data Scraper; (b) Data Cleanser; (c) Data Pusher
 2. Database
@@ -46,7 +47,7 @@ The data scraper makes use of the BeautifulSoup and Selenium libraries and follo
 
 The data cleanser utilizes the Pandas and NumPy libraries.  Jupyter Notebook was used for data exploration and developing the data cleansing steps.
 
-The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
+The data pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
 
 ### Database
 The Google Cloud Firestore NoSQL database is used as the backend for this project.
@@ -56,7 +57,7 @@ The data visualization is a web-based application (HTML/CSS/Javascript) that bot
 
 Description of Data 
 -------------------
-Category                          |  Description
+Dimension                         |  Description
 ----------------------------------|------------------------------------------------------------------------------------
 Brand                             |  Manufacturer of the instrument.
 Price                             |  Price of the instrument in US Dollars.
@@ -69,10 +70,3 @@ Fretboard - Material              |  The type of wood or other material used for
 Fretboard - Number of Frets       |  How many frets are set in the fretboard.
 Pickups - Configuration           |  The types of pickups used and in what positions. Placement is bridge -> neck; H = humbucker, S = single coil. Example: HSS means bridge humbucker, middle single coil, and neck single coil.
 Pickups - Active or Passive       |  Whether the signals received from the pickups are boosted by an internal preamp. 
-
-
-
-
-
-
-
