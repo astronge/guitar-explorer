@@ -1,7 +1,7 @@
 # Guitar Data Explorer
 
 ## Introduction
-Welcome! This tool's purpose is to allow exploration of guitar models to help you to find your dream instrument. It can also be used for general research purposes to answer questions such as:
+Welcome!  This tool's purpose is to allow exploration of guitar models to help you to find your dream instrument.  It can also be used for general research purposes to answer questions such as:
 1. What is a given brand's niche with regard to feature-set?
 2. What features are most associated with higher-end models?
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
@@ -11,7 +11,7 @@ Welcome! This tool's purpose is to allow exploration of guitar models to help yo
 
 ## Instructions
 ### Interacting
-The dashboard contains a number of charts that display information related to features that may be found on a guitar, such as the body shape or fretboard material. Interact with the charts by clicking on them to filter for the features that you are interested in. Selecting a feature from a particular category will filter out all models that do not have the particular feature set you have selected for.  
+The dashboard contains a number of charts that display information related to features that may be found on a guitar, such as the body shape or fretboard material.  Interact with the charts by clicking on them to filter for the features that you are interested in. Selecting a feature from a particular category will filter out all models that do not have the particular feature set you have selected for.  
 
 ### Filtering
 Within a feature, selections are OR and between features selections are AND.  For example, selecting "Double Cutaway" from Body Shape and both "Maple" and "Rosewood" for fretboard material, the resulting filter would be equivalent to the following SQL query:
@@ -27,7 +27,7 @@ The number in the header bar refers to how many guitars meet your filtering crit
 Once you are satisfied with your selections, clicking the RESULTS button will open the results panel for you to be able to scroll through the list of guitars that was returned. 
 
 ### Call to Action
-Once you have identified the right instrument, clicking on its image will take you Musicians Friend website where you may complete your purchase. Go ahead, you deserve it!
+Once you have identified the right instrument, clicking on its image will take you Musicians Friend website where you may complete your purchase.  Go ahead, you deserve it!
 
 ## Project Design
 ### Components and Flow
@@ -44,7 +44,7 @@ All ETL Pipeline components are written in Python.
 
 The data scraper makes use of the BeautifulSoup and Selenium libraries and follows [ethical scraping principles](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01).  
 
-The data cleanser utilizes the Pandas library, and Jupyter Notebook was used for data exploration and developing the data cleansing steps.
+The data cleanser utilizes the Pandas and NumPy libraries.  Jupyter Notebook was used for data exploration and developing the data cleansing steps.
 
 The Data Pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
 
