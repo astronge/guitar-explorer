@@ -28,7 +28,7 @@ The number in the header bar refers to how many guitars meet your filtering crit
 Once you are satisfied with your selections, clicking the RESULTS button will open the results panel for you to be able to scroll through the list of guitars that were returned. 
 
 ### Call to Action
-Once you have identified the right instrument, clicking on its image will take you to the Musicians Friend website where you may complete your purchase.  Go ahead, you deserve it!
+Once you have identified the right instrument, clicking on its image will take you to the Musicians Friend website where you can complete your purchase.  Go ahead, you deserve it!
 
 ## Project Design
 ### Components and Flow
