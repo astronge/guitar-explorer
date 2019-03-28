@@ -15,7 +15,7 @@ Welcome!  This tool's purpose is to allow exploration of guitar models to help y
 The dashboard contains a number of charts that display guitar-related information, such as body shape or fretboard material.  Interact with the charts by clicking on them to filter for the features that you are interested in.  Selecting a feature from a particular chart will filter out all models that do not have that particular feature.  
 
 ### Filtering
-Within a chart, selections are OR and between features selections are AND.  For example, selecting "Double Cutaway" from Body Shape and both "Maple" and "Rosewood" from fretboard material, the resulting filter would be equivalent to the following SQL query:
+Within a chart, selections are OR and between charts selections are AND.  For example, selecting "Double Cutaway" from Body Shape and both "Maple" and "Rosewood" from fretboard material, the resulting filter would be equivalent to the following SQL query:
 ```
 SELECT guitars 
   FROM guitar
