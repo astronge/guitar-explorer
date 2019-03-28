@@ -73,9 +73,11 @@ Pickups - Active or Passive       |  Whether the signals received from the picku
 ## Getting This to Work Locally
 ### Setting Up Firebase
 1.  Create a new [Firebase](https://firebase.google.com/) collection called "guitars".
-1.  Update the guitars-firebase.json file located in the guitar_scraper folder.  Adding your [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) credentials will allow the data pusher to access the Firestore database.
-2.  Replace the Firebase Initialization script in index.html to include your [personal configs](https://firebase.google.com/docs/web/setup?authuser=0).  This will allow data to be pulled from Firebase by the web app.
-3.  Install guitar_scraper dependencies by opening a terminal window from the guitar_scraper folder and running ```pipenv install```, which will grab everything in Pipfile.lock.  If you don't have pipenv installed, follow the instructions [here](https://pipenv.readthedocs.io/en/latest/).  
+2.  Update the guitars-firebase.json file located in the guitar_scraper folder.  Adding your [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) credentials will allow the data pusher to access the Firestore database.
+3.  Replace the Firebase Initialization script in index.html to include your [personal configs](https://firebase.google.com/docs/web/setup?authuser=0).  This will allow data to be pulled from Firebase by the web app.
+
+### Install Dependencies
+Install guitar_scraper dependencies by opening a terminal window from the guitar_scraper folder and running ```pipenv install```, which will grab everything in Pipfile.lock.  If you don't have pipenv installed, follow the instructions [here](https://pipenv.readthedocs.io/en/latest/).  
 
 ### Getting Fresh Data
 To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time (mostly due to sleeping a bit between each request).  
