@@ -46,7 +46,7 @@ The data scraper makes use of the BeautifulSoup and Selenium libraries and follo
 
 The data cleanser utilizes the Pandas and NumPy libraries.  Jupyter Notebook was used for data exploration and developing the data cleansing steps.
 
-The data pusher uses the Firebase Admin library to delete the previous dataset and write the cleaned data to the database.
+The data pusher uses the Firebase Admin library to delete the previous dataset and write the clean data to the database.
 
 ### Database
 Google Cloud Firestore, a NoSQL database, is used as the backend for this project.
@@ -71,7 +71,7 @@ Pickups - Configuration           |  The types of pickups used and in what posit
 Pickups - Active or Passive       |  Whether the signals received from the pickups are boosted by an internal preamp. 
 
 ## Getting This to Work Locally
-### Setting Up Firebase
+### Set Up Firebase
 1.  Create a new [Firebase](https://firebase.google.com/) collection called "guitars".
 2.  Update the guitars-firebase.json file located in the guitar_scraper folder.  Adding your [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) credentials will allow the data pusher to access the Firestore database.
 3.  Replace the Firebase Initialization script in index.html to include your [personal configs](https://firebase.google.com/docs/web/setup?authuser=0).  This will allow data to be pulled from Firebase by the web app.
@@ -79,7 +79,7 @@ Pickups - Active or Passive       |  Whether the signals received from the picku
 ### Install Dependencies
 Install guitar_scraper dependencies by opening a terminal window from the guitar_scraper folder and running ```pipenv install```, which will grab everything in Pipfile.lock.  If you don't have pipenv installed, follow the instructions [here](https://pipenv.readthedocs.io/en/latest/).  
 
-### Getting Fresh Data
+### Get Fresh Data
 To initiate the scrape/clean/push process, execute run_pipeline.py.  Note that while the clean and push processes run fairly quickly, the scrape portion takes quite some time (mostly due to sleeping a bit between each request).  
 
 ## License
