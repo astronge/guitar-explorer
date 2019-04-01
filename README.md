@@ -1,7 +1,7 @@
 # Guitar Data Explorer
 
 ## Introduction
-Welcome!  This tool's purpose is to allow exploration of guitar models to help you to find your dream instrument.  It can also be used for general research purposes to answer questions such as:
+Welcome!  I built this app as a better way to find my dream instrument as a result of being frustrated with the limited searching capabilities on guitar retailer websites.  It can also be used for general research purposes to answer questions such as:
 1. What is a given brand's niche with regard to feature-set?
 2. What features are most associated with higher-end models?
 3. When comparing comparable instruments, how much of a premium is placed on American-made?
