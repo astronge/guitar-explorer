@@ -64,7 +64,7 @@ Country of Origin                 |  Where the instrument was manufactured.
 Body - Shape                      |  The shape of the guitar body, with "Single Cutaway" meaning a cutout on the underside of the fretboard in the Fender Telecaster style.  "Double Cutaway" means a cutout both above and below the fretboard like a Fender Stratocaster.  "V" indicates a v-shaped body like the Gibson flying V, and "Z" indicates a z-type body like that of a Gibson Explorer.
 Body - Type                       |  Whether the body is made of solid wood or whether it is semi-hollow, or hollow.
 Neck - Joint                      |  The means of attaching the neck to the body.
-Neck - Finish                     |  What type of finish is used on the neck, with "Gloss" referring to a thicker, higher sheen, typically through use of polyeurathane or similar.  "Satin" means a thinner, lower sheen finish.  "Oiled" means a simple finish
+Neck - Finish                     |  What type of finish is used on the neck, with "Gloss" referring to a thicker, higher sheen, typically through use of polyeurathane or similar.  "Satin" means a thinner, lower sheen finish, with a slicker feel.  "Oiled" means a simple, most natural finish.
 Fretboard - Material              |  The type of wood or other material used for the fretboard.
 Fretboard - Number of Frets       |  How many frets are set in the fretboard.
 Pickups - Configuration           |  The types of pickups used and in what positions. Placement is bridge -> neck; H = humbucker, S = single coil. Example: HSS means bridge humbucker, middle single coil, and neck single coil.
